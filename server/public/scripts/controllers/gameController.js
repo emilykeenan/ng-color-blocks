@@ -7,6 +7,8 @@ self.colors = DataFactory.colors;
 self.correctCount = 0;
 self.highScores = DataFactory.highScores;
 self.highScore = {};
+self.highestScore = DataFactory.scores[DataFactory.scores.length - 1];
+self.scores = DataFactory.scores;
 self.playing = true;
 
 // start game
@@ -14,6 +16,7 @@ init();
 
 // resets game to the starting state
 function init() {
+  console.log(self.correctCount);
   self.messageText = "";
   self.currentColor = self.colors[randomNumber(0, self.colors.length - 1)];
   self.colorPrompt = 'Can you find the ' + self.currentColor + ' block?'
@@ -22,11 +25,17 @@ function init() {
 // click handler for guessing colors
 self.handleInput = function(clickedColor) {
   if(clickedColor === self.currentColor) {
+    self.correctCount++;
     alert('You got it!\n\nNow try another!');
     init();
-    self.correctCount++;
   } else {
+    self.messageText = 'Oh no! You guessed wrong!';
+    if(self.correctCount > self.highestScore) {
+    console.log(self.highestScore);
     self.playing = false;
+    self.scores.push(self.correctCount);
+    DataFactory.scores = self.scores;
+  }
   }
 }
 
@@ -35,10 +44,11 @@ self.submitScore = function() {
   console.log(self.highScore);
   self.highScores.push(self.highScore);
   DataFactory.highScores = self.highScores;
-  self.correctCount = 0;
   self.highScore = {};
   self.playing = true;
   alert('Score submitted! Play again!');
+  self.correctCount = 0;
+  init();
 }
 
 //UTILITY FUNCTIONS

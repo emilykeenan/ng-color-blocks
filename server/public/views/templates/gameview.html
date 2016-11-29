@@ -1,4 +1,4 @@
-<div class="row" id="gameview">
+<div class="row" id="gameview" ng-show="game.playing">
   <h1>{{game.colorPrompt}}</h1>
 
   <h3 ng-if="game.messageText != ''" class="alert alert-warning">{{game.messageText}}</h3>
