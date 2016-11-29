@@ -7,3 +7,9 @@
     <div class="color-button" ng-repeat="color in game.colors" ng-style="{background: color}" ng-click="game.handleInput(color)"></div>
   </div>
 </div>
+
+<div id="highScoreContainer" ng-hide="game.playing">
+  <p>You scored {{game.correctCount}}! Save your score!</p>
+  <input type="text" ng-model="game.highScore.name" name="text" class="form-control" ng-value="game.highScore.name"/>
+  <button class="btn btn-default" ng-click="game.submitScore(color)">Save Score</button>
+</div>
