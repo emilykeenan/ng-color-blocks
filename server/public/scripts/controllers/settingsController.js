@@ -9,7 +9,7 @@ colorBlocks.controller('SettingsController', ['$scope', "DataFactory", function(
   // making array of objects from colors array
   makeColorObjects(self.colors);
   console.log(self.colorObjects);
-
+  
   // adding a color to the colors array, pushing it to the array in the DataFactory,
   // clearing out newColor and colorObjects array, then remaking colorObjects array
   self.addColor = function() {

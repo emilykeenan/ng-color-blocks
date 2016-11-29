@@ -1,13 +1,13 @@
 <div id="scoresContainer" class="container">
-<h2>High Scores</h2>
-<table class="table">
-  <tr>
-    <th>Name</th>
-    <th>Score</th>
-  </tr>
-  <tr ng-repeat="score in scores.highScores">
-    <td>{{score.name}}</td>
-    <td>{{score.highScore}}</td>
-  </tr>
-</table>
+  <h2>Leaderboard</h2>
+  <table class="table">
+    <tr>
+      <th>Name</th>
+      <th>Score</th>
+    </tr>
+    <tr ng-repeat="score in scores.highScores">
+      <td>{{score.name}}</td>
+      <td>{{score.highScore}}</td>
+    </tr>
+  </table>
 </div>

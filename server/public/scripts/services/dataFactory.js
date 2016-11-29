@@ -5,11 +5,11 @@ colorBlocks.factory('DataFactory', [function() {
   var scores = [1];
 
   var publicApi = {
-  colors: colors,
-  highScores: highScores,
-  scores: scores
-};
-
-return publicApi;
+    colors: colors,
+    highScores: highScores,
+    scores: scores
+  };
+  
+  return publicApi;
 
 }]);
