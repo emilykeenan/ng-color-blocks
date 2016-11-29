@@ -9,7 +9,7 @@
 </div>
 
 <div id="highScoreContainer" ng-hide="game.playing">
-  <p>You scored {{game.correctCount}}! Save your score!</p>
+  <p>You beat the high score with a score of {{game.correctCount}}! Join the leaderboard!</p>
   <input type="text" ng-model="game.highScore.name" name="text" class="form-control" ng-value="game.highScore.name"/>
   <button class="btn btn-default" ng-click="game.submitScore(color)">Save Score</button>
 </div>
