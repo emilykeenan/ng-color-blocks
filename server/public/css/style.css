@@ -1,11 +1,61 @@
-main {
-  margin: 50px;
+body {
+  background: url('/assets/images/background.png') top left repeat;
+  font-family: 'PT Serif', serif;
 }
 
-#gameview {
-  width: 90%;
-  margin: 20px;
+main {
+  margin: 0 auto;
 }
+
+.jumbotron {
+  text-align: center;
+  margin-bottom: 0px;
+  font-family: 'Bungee Inline', cursive;
+  text-transform: uppercase;
+  background: url('/assets/images/header.png');
+  background-size: 50%;
+}
+
+.nav {
+  background: lemonchiffon;
+  border-radius: 5px;
+  border-top: 1px solid #b6b399;
+  border-bottom: 1px solid #b6b399;
+  margin-right: -30px;
+}
+
+#button-container{
+  width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#highScoreContainer {
+  background: white;
+  width: 500px;
+}
+
+#highScoreContainer button {
+  margin-top: 15px;
+}
+
+#highScoreContainer input {
+  margin-top: 15px;
+}
+
+#gameview, #highScoreContainer, #settingsContainer, #scoresContainer {
+  margin: 0 auto;
+  background: white;
+  text-align: center;
+  width: 100%;
+  padding: 40px;
+}
+
+th {
+  background: #f79091;
+  color: white;
+}
+
 .color-button {
     width: 120px;
     height: 120px;
