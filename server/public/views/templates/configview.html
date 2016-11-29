@@ -1,5 +1,13 @@
 <div class="row">
   <h1>Settings</h1>
 
-  To Do: UI to add colors to the game.
+  <form>
+    <div class="form-group">
+    <label for="newColor">New Color:</label>
+    <input type="text" ng-model="settings.newColor" name="text" class="form-control"/>
+  </div>
+  <button class="btn btn-default" ng-click="settings.addColor()">Enter a New Color</button>
+  </form>
+
+{{settings.newColor}}
 </div>
