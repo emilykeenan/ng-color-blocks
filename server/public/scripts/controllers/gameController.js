@@ -32,10 +32,10 @@ colorBlocks.controller('GameController', ['$scope', "DataFactory", function($sco
       // checks correctCount against high scores to see if player is eligible for leaderboard
       self.messageText = 'Oh no! You guessed wrong!';
       if(self.correctCount > self.highestScore) {
-        console.log(self.highestScore);
         self.playing = false;
         self.scores.push(self.correctCount);
         DataFactory.scores = self.scores;
+        self.highestScore = self.correctCount;
       }
     }
   }
