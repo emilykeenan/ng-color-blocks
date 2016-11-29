@@ -1,13 +1,26 @@
 <div class="row">
   <h1>Settings</h1>
 
+  <h3>Add a Color</h3>
   <form>
     <div class="form-group">
-    <label for="newColor">New Color:</label>
-    <input type="text" ng-model="settings.newColor" name="text" class="form-control"/>
-  </div>
-  <button class="btn btn-default" ng-click="settings.addColor()">Enter a New Color</button>
+      <label for="newColor">New Color:</label>
+      <input type="text" ng-model="settings.newColor" name="text" class="form-control"/>
+    </div>
+    <button class="btn btn-default" ng-click="settings.addColor()">Enter a New Color</button>
   </form>
 
-{{settings.newColor}}
-</div>
+  <h3>Edit Colors</h3>
+  <table class="table">
+    <tr>
+      <th>Color</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+    <tr class="individual_color" ng-repeat="color in settings.colorObjects">
+      <td><input type="text" ng-model="color.name" name="text" class="form-control" ng-value="color.name"/></td>
+      <td><button class="btn btn-default" ng-click="settings.editColor(color)">Edit</button></td>
+      <td><button class="btn btn-default" ng-click="settings.deleteColor(color)">Delete</button>
+      </tr>
+    </table>
+  </div>
