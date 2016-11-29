@@ -54,6 +54,7 @@ main {
 th {
   background: #f79091;
   color: white;
+  text-align: center;
 }
 
 .color-button {

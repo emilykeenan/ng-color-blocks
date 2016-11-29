@@ -29,6 +29,7 @@ self.handleInput = function(clickedColor) {
     alert('You got it!\n\nNow try another!');
     init();
   } else {
+    // checks correctCount against high scores to see if player is eligible for leaderboard
     self.messageText = 'Oh no! You guessed wrong!';
     if(self.correctCount > self.highestScore) {
     console.log(self.highestScore);
@@ -39,6 +40,7 @@ self.handleInput = function(clickedColor) {
   }
 }
 
+// function to submit a high score if you have beaten the current high score
 self.submitScore = function() {
   self.highScore.highScore = self.correctCount;
   console.log(self.highScore);
